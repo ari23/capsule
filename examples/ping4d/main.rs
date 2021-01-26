@@ -30,6 +30,7 @@ fn reply_echo(packet: &Mbuf) -> Fallible<EchoReply> {
     let reply = Mbuf::new()?;
 
     let ethernet = packet.peek::<Ethernet>()?;
+    debug!(?ethernet);
     let mut reply = reply.push::<Ethernet>()?;
     reply.set_src(ethernet.dst());
     reply.set_dst(ethernet.src());
@@ -68,5 +69,6 @@ fn main() -> Fallible<()> {
 
     Runtime::build(config)?
         .add_pipeline_to_port("eth1", install)?
+        .add_pipeline_to_port("eth2", install)?
         .execute()
 }

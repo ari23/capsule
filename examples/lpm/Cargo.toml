@@ -1,0 +1,24 @@
+[package]
+name = "lpm"
+version = "0.1.0"
+authors = ["Ari <arisaha@icloud.com>"]
+edition = "2018"
+publish = false
+readme = "README.md"
+description = """
+A simple LPM daemon example.
+"""
+
+[[bin]]
+name = "lpm"
+path = "src/bin/main.rs"
+doctect = false
+
+[dependencies]
+capsule = { version = "0.1", path = "../../core" }
+colored = "2.0"
+failure = "0.1"
+tracing = "0.1"
+tracing-subscriber = "0.2"
+treebitmap = "0.4.0"
+lazy_static = "1.4.0"

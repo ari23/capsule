@@ -1,4 +1,4 @@
-app_name = "ping4d"
+app_name = "lpm"
 master_core = 0
 duration = 3000
 

@@ -3,6 +3,7 @@ members = [
     "bench",
     "core",
     "examples/kni",
+    "examples/lpm",
     "examples/nat64",
     "examples/ping4d",
     "examples/pktdump",
